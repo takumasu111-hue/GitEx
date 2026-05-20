@@ -7,6 +7,13 @@ public class Report7_2 {
 	public static int multiply(int a, int b) {
 		int result = 0;
 
+		// b が負の場合に備えて絶対値で処理し、最後に符号を調整
+		boolean negative = false;
+		if (b < 0) {
+            b = -b;
+            a = -a;  // a * (-b) = -(a * b) なので a の符号を反転
+        }
+
 		 // b の最下位ビットが 1（奇数）の場合、現在の a を result に加算
 		while(b > 0) {
 			if((b & 1) != 0) {
