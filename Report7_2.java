@@ -12,7 +12,9 @@ public class Report7_2 {
 			if((b & 1) != 0) {
 			   result = result + a;
 		    }
+			// b を右シフト（1/2、切り捨て）
 		    a = a << 1;
+			// b を右シフト（1/2、切り捨て）
 		    b = b >> 1;
 	}
 	
